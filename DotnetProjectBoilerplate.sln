@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F0509D19-2B50-4CEE-AD2F-DA7206B07CC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C39170E1-C80D-4BA9-BD0B-8D6211BA76A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetProjectBoilerplate.Core", "src\Core\DotnetProjectBoilerplate.Core\DotnetProjectBoilerplate.Core.csproj", "{A012446A-38E0-460D-BD20-15142EDCE436}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{66C5C42D-625B-44D1-9BE9-719201D5295F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetProjectBoilerplate.ConsoleApp", "src\Presentation\DotnetProjectBoilerplate.ConsoleApp\DotnetProjectBoilerplate.ConsoleApp.csproj", "{A7F9A894-51E3-490D-A801-5C485A863EA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A012446A-38E0-460D-BD20-15142EDCE436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A012446A-38E0-460D-BD20-15142EDCE436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A012446A-38E0-460D-BD20-15142EDCE436}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A012446A-38E0-460D-BD20-15142EDCE436}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F9A894-51E3-490D-A801-5C485A863EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F9A894-51E3-490D-A801-5C485A863EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F9A894-51E3-490D-A801-5C485A863EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F9A894-51E3-490D-A801-5C485A863EA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C39170E1-C80D-4BA9-BD0B-8D6211BA76A3} = {F0509D19-2B50-4CEE-AD2F-DA7206B07CC5}
+		{A012446A-38E0-460D-BD20-15142EDCE436} = {C39170E1-C80D-4BA9-BD0B-8D6211BA76A3}
+		{66C5C42D-625B-44D1-9BE9-719201D5295F} = {F0509D19-2B50-4CEE-AD2F-DA7206B07CC5}
+		{A7F9A894-51E3-490D-A801-5C485A863EA3} = {66C5C42D-625B-44D1-9BE9-719201D5295F}
+	EndGlobalSection
+EndGlobal
