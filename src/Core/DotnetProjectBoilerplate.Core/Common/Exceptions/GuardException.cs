@@ -1,3 +1,5 @@
+using DotnetProjectBoilerplate.Core.Common.Specifications;
+
 namespace DotnetProjectBoilerplate.Core.Common.Exceptions;
 
 public static class GuardException

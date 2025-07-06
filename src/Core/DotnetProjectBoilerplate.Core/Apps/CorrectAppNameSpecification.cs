@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using DotnetProjectBoilerplate.Core.Common.Specifications;
 
 namespace DotnetProjectBoilerplate.Core.Apps;
 

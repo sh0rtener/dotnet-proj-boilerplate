@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.Text;
+using DotnetProjectBoilerplate.Core.Projects.Boilerplates;
 
 namespace DotnetProjectBoilerplate.Core.Projects;
 
@@ -7,6 +9,9 @@ public class ClassLibraryProject : Project
     protected readonly string _srcPath;
     protected readonly string _projectPath;
     protected string _subDirectory = "";
+
+    public override Dictionary<string, (string, Boilerplate)[]> BoilerplateMap =>
+        throw new NotImplementedException();
 
     public ClassLibraryProject(
         string name,
@@ -46,7 +51,7 @@ public class ClassLibraryProject : Project
             // RedirectStandardOutput = false
         };
 
-        Process.Start(processStartInfo);
+        Process.Start(processStartInfo)!.WaitForExit();
 
         processStartInfo.Arguments = string.Format(
             "sln {0} add {1}",
@@ -55,6 +60,22 @@ public class ClassLibraryProject : Project
         );
 
         Process.Start(processStartInfo);
+
+        foreach (var boilerplate in BoilerplateMap)
+        {
+            var dir = _projectPath + boilerplate.Key;
+
+            if (!Directory.Exists(dir))
+                Directory.CreateDirectory(dir);
+
+            foreach (var file in boilerplate.Value)
+            {
+                var filePath = dir + "/" + file.Item1;
+                var value = file.Item2.Build();
+
+                File.WriteAllBytes(filePath, Encoding.UTF8.GetBytes(value));
+            }
+        }
 
         return new("Success", _projectPath);
     }
