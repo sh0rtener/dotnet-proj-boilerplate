@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../../Core/DotnetProjectBoilerplate.Core/DotnetProjectBoilerplate.Core.csproj" />
+  </ItemGroup>
+
 </Project>
