@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../../Core/DotnetProjectBoilerplate.Application/DotnetProjectBoilerplate.Application.csproj" />
     <ProjectReference Include="../../Core/DotnetProjectBoilerplate.Core/DotnetProjectBoilerplate.Core.csproj" />
   </ItemGroup>
 
