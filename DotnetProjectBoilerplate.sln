@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetProjectBoilerplate.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetProjectBoilerplate.Application", "src\Core\DotnetProjectBoilerplate.Application\DotnetProjectBoilerplate.Application.csproj", "{82884CDA-D04A-4C85-BA3F-61ABA2804463}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{79C39547-4717-4B7A-AEC7-9005681CE707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetProjectBoilerplate.UnitTests", "tests\DotnetProjectBoilerplate.UnitTests\DotnetProjectBoilerplate.UnitTests.csproj", "{64DE5B31-E9B0-44CE-A53C-1173FBDDD11A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,10 @@ Global
 		{82884CDA-D04A-4C85-BA3F-61ABA2804463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82884CDA-D04A-4C85-BA3F-61ABA2804463}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82884CDA-D04A-4C85-BA3F-61ABA2804463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64DE5B31-E9B0-44CE-A53C-1173FBDDD11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DE5B31-E9B0-44CE-A53C-1173FBDDD11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DE5B31-E9B0-44CE-A53C-1173FBDDD11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DE5B31-E9B0-44CE-A53C-1173FBDDD11A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C39170E1-C80D-4BA9-BD0B-8D6211BA76A3} = {F0509D19-2B50-4CEE-AD2F-DA7206B07CC5}
@@ -43,5 +51,6 @@ Global
 		{66C5C42D-625B-44D1-9BE9-719201D5295F} = {F0509D19-2B50-4CEE-AD2F-DA7206B07CC5}
 		{A7F9A894-51E3-490D-A801-5C485A863EA3} = {66C5C42D-625B-44D1-9BE9-719201D5295F}
 		{82884CDA-D04A-4C85-BA3F-61ABA2804463} = {C39170E1-C80D-4BA9-BD0B-8D6211BA76A3}
+		{64DE5B31-E9B0-44CE-A53C-1173FBDDD11A} = {79C39547-4717-4B7A-AEC7-9005681CE707}
 	EndGlobalSection
 EndGlobal

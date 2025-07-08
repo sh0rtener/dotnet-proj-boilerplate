@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using DotnetProjectBoilerplate.Core.Common.Entities;
 using DotnetProjectBoilerplate.Core.Common.Exceptions;
 using DotnetProjectBoilerplate.Core.Projects;
@@ -21,6 +22,19 @@ public class App : Entity<int>
         );
 
         Path = GuardException.ThrowIfInvalidPath(path);
+    }
+
+    public void Initialize()
+    {
+        var processStartInfo = new ProcessStartInfo("dotnet")
+        {
+            UseShellExecute = false,
+            Arguments = string.Format("new sln -n {0} -o {1}", Name, Path),
+            WindowStyle = ProcessWindowStyle.Hidden,
+            RedirectStandardOutput = false,
+        };
+
+        Process.Start(processStartInfo)!.WaitForExit();
     }
 
     public void AddProject(Project project)
