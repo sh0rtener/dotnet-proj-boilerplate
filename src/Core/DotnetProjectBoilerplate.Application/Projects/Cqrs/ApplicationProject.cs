@@ -59,10 +59,10 @@ public class ApplicationProject : ClassLibraryProject
 
         var processStartInfo = new ProcessStartInfo("dotnet")
         {
-            UseShellExecute = true,
+            UseShellExecute = false,
             Arguments = string.Format("add package {0} AutoMapper", _projectPath),
             WindowStyle = ProcessWindowStyle.Hidden,
-            // RedirectStandardOutput = false
+            RedirectStandardOutput = false
         };
 
         Process.Start(processStartInfo)!.WaitForExit();
@@ -73,13 +73,17 @@ public class ApplicationProject : ClassLibraryProject
             "FluentValidation.DependencyInjectionExtensions",
             "Microsoft.Extensions.Logging",
             "Microsoft.Extensions.Options.ConfigurationExtensions",
-            "MediatR"
+            "MediatR",
         ];
 
         foreach (var package in packages)
         {
-            processStartInfo.Arguments = string.Format("add package {0}", package);
-            Process.Start(processStartInfo);
+            processStartInfo.Arguments = string.Format(
+                "add {0} package {1}",
+                _projectPath,
+                package
+            );
+            Process.Start(processStartInfo)!.WaitForExit();
         }
 
         return result;

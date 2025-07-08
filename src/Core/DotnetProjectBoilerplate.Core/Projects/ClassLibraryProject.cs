@@ -29,13 +29,13 @@ public class ClassLibraryProject : Project
     {
         var processStartInfo = new ProcessStartInfo("dotnet")
         {
-            UseShellExecute = true,
+            UseShellExecute = false,
             Arguments = string.Format("sln {0} remove {1}", ApplicationPath, _projectPath),
             WindowStyle = ProcessWindowStyle.Hidden,
             // RedirectStandardOutput = false
         };
 
-        Process.Start(processStartInfo);
+        Process.Start(processStartInfo)!.WaitForExit();
 
         if (Directory.Exists(_projectPath))
             Directory.Delete(_projectPath, true);
@@ -45,7 +45,7 @@ public class ClassLibraryProject : Project
     {
         var processStartInfo = new ProcessStartInfo("dotnet")
         {
-            UseShellExecute = true,
+            UseShellExecute = false,
             Arguments = string.Format("new classlib -n {0} -o {1}", Name, _projectPath),
             WindowStyle = ProcessWindowStyle.Hidden,
             RedirectStandardOutput = false
@@ -59,7 +59,7 @@ public class ClassLibraryProject : Project
             _projectPath
         );
 
-        Process.Start(processStartInfo);
+        Process.Start(processStartInfo)!.WaitForExit();
 
         foreach (var boilerplate in BoilerplateMap)
         {
