@@ -15,6 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../../src/Core/DotnetProjectBoilerplate.Application/DotnetProjectBoilerplate.Application.csproj" />
+    <ProjectReference Include="../../src/Core/DotnetProjectBoilerplate.Core/DotnetProjectBoilerplate.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
 

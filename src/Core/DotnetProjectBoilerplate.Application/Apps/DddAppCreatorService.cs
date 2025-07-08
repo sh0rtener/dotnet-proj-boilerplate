@@ -11,6 +11,7 @@ public class DddAppCreatorService : IAppService
     public App CreateApp(string appName, string appDir)
     {
         var app = new App(appName, appDir);
+        app.Initialize();
         var core = new CoreProject(appName, appDir, appName);
         var application = new ApplicationProject(appName, appDir, appName);
         var infrastructure = new InfrastructureProject(appName, appDir, appName);
