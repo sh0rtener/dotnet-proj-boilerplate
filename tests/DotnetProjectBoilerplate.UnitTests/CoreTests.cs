@@ -11,7 +11,7 @@ public class CoreTests
     [Fact]
     public void CreateCoreProject_ShouldBeOk()
     {
-        if (!Directory.Exists(_appPath))
+        if (Directory.Exists(_appPath))
             Directory.Delete(_appPath, true);
 
         // Arrange
