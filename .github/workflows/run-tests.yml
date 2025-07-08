@@ -1,0 +1,25 @@
+name: .NET Solution Restore and Build the solution
+
+on:
+  push:
+    branches: [ "main", "dev*" ]
+  pull_request:
+    branches: [ "main", "dev*" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore 
+    - name: Build 
+      run: dotnet build
+    - name: Run Tests
+      run: dotnet test
