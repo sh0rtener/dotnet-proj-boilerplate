@@ -1,5 +1,7 @@
 using System.Linq.Expressions;
 
+namespace DotnetProjectBoilerplate.Core.Common.Specifications;
+
 public class ParameterReplacer : ExpressionVisitor
 {
     private readonly ParameterExpression _parameter;

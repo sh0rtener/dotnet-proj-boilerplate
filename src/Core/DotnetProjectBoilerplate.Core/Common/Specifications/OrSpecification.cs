@@ -1,5 +1,7 @@
 using System.Linq.Expressions;
 
+namespace DotnetProjectBoilerplate.Core.Common.Specifications;
+
 public class OrSpecification<T> : Specification<T>
 {
     private Specification<T> _left;
