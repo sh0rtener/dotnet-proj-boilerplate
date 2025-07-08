@@ -21,7 +21,7 @@ Stable up-to-date versions will be on the main branch.
 ## How to use
 
 Next, everything is quite simple, we launch the project:
-``
+```
 dotnet runtime
 ```
 
