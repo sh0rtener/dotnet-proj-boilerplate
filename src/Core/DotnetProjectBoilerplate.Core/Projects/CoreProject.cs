@@ -1,4 +1,3 @@
-using System.Text;
 using DotnetProjectBoilerplate.Core.Projects.Boilerplates;
 using DotnetProjectBoilerplate.Core.Projects.Boilerplates.CoreBoilerplates;
 
